@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let title">
+       <div class="card">
+           <div class="img">
+               <a [routerLink]="['/title-details', title.id]">
+                <img
+                [src] = "title.image"
+                [alt] = "title.name"
+                class="card-img-top"
+                >
+            </a>
+           </div>
+           <div class="card-inner">
+               <div class="header">
+                <a [routerLink]="['/title-details', title.id]">
+                    <h2>title.title</h2>
+                </a>
+                <h4 class="text-muted">title.gender</h4>
+                <small class="text-muted">title.created</small> 
+               </div>
+           </div>
+       </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-12 mt-t container-notFound">
+        <p>No results.....</p>
+    </div>
+    <button class="btn btn-dark">GO UP</button>
+</div>
