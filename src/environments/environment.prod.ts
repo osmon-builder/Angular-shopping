@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrlAPI:'https://api.mercadolibre.com/sites/MCO/search?category=MCO1430'
 };

@@ -13,7 +13,7 @@ export class AppComponent {
     private searchServices: SearchdetailsService
   ){
 
-    this.searchServices.getProduct().subscribe((resp: any) => {
+    this.searchServices.searchProduct().subscribe((resp: any) => {
       console.log(resp)
       this.product = resp
     })
