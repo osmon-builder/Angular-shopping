@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SearchdetailsService } from 'src/app/services/searchdetails.service';
 
 
 @Component({
@@ -9,16 +10,18 @@ import { Router } from '@angular/router';
 })
 export class FromSearchComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router: Router,
+    private productSvc: SearchdetailsService) { }
 
   ngOnInit(): void {
   }
 
-  onSearch(value: string){
-    if(value && value.length > 3 ){
-      this.router.navigate(['/productlist'], {
-        queryParams:{ q: value }
+  onSearch(value: string) {
+    if (value && value.length > 3) {
+      this.router.navigate(['/landing-page/products'], {
+        queryParams: { q: value }
       })
+      this.productSvc.sendSearch(value);
     }
   }
 

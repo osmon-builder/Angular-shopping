@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { SearchdetailsService } from 'src/app/services/searchdetails.service';
 
 @Component({
@@ -6,14 +7,24 @@ import { SearchdetailsService } from 'src/app/services/searchdetails.service';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent implements OnInit{
 
-  public products : any;
-
-  constructor(private productSvc: SearchdetailsService) {
+  public products: any;
+  public search: string = '';
+  
+  constructor(
+    private productSvc: SearchdetailsService,
+    public route: ActivatedRoute,
+  ) {
     this.productSvc.getProducts().subscribe(products => {
       this.products = products.results
-      console.log("products", this.products)
+    })
+    this.search = this.route.snapshot.queryParams.q;
+    this.productSvc.getSearch.subscribe(search => {
+      this.productSvc.searchProduct(search).subscribe(res => {
+        console.log(res)
+        this.products = res.results
+      })
     })
   }
 
