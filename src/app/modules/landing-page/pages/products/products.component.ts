@@ -12,6 +12,7 @@ export class ProductsComponent implements OnInit{
   public products: any;
   public search: string = '';
   
+  
   constructor(
     private productSvc: SearchdetailsService,
     public route: ActivatedRoute,

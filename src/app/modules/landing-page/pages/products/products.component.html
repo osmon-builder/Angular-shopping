@@ -3,7 +3,10 @@
         <div class="col-lg-3" *ngFor="let product of products">
             <div style="width: 100%; border: 1px solid #ccc;">
                 {{product.title}}
-                <h3>{{product.img}}</h3>
+                <img src="{{product.thumbnail}}"/>
+                <h3>{{product.price}} COP</h3> 
+                <h3>{{product.available_quantity}} U/D </h3>
+                <button>Agregar al carro</button>
             </div>
         </div>
     </div>
