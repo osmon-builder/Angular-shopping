@@ -16,7 +16,7 @@ export class ProductlistComponent implements OnInit {
   product: Product[] = [];
 
   private pageNum = 1;
-  private query: string;
+  // private query: string;
   
 
   constructor(private productSvc: SearchdetailsService,
@@ -26,14 +26,14 @@ export class ProductlistComponent implements OnInit {
     this.getDataFromServices();
   }
 
-  private getProductByQuery(): void{
-    this.queryParams.pipe(
-      take(1)).subscribe((params: ParamMap) =>{
-        this.query = params['q']
-        this.getDataFromServices();
-      })
-    )
-  }
+  // private getProductByQuery(): void{
+  //   this.queryParams.pipe(
+  //     take(1)).subscribe((params: ParamMap) =>{
+  //       this.query = params['q']
+  //       this.getDataFromServices();
+  //     })
+  //   )
+  // }
 
   private getDataFromServices (): void{
     this.productSvc

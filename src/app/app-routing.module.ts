@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+
 
 const routes: Routes = [
   {
@@ -8,16 +8,16 @@ const routes: Routes = [
     redirectTo:'home',
     pathMatch:'full',
   },
-  // {
-  //   path:'home',
-  //   loadChildren: () => 
-  //     import('./home/home.component').then((m) => m.HomeComponent)
-  // },
-  // {
-  //   path:'productlist/:id',
-  //   loadChildren: () => 
-  //     import('./components/product/productlist/productlist.component').then((m) => m.ProductlistComponent)
-  // }
+  {
+    path:'home',
+    loadChildren: () => 
+      import('./home/home.component').then((m) => m.HomeComponent)
+  },
+  {
+    path:'productlist/:id',
+    loadChildren: () => 
+      import('./components/product/productlist/productlist.component').then((m) => m.ProductlistComponent)
+  }
 ];
 
 @NgModule({

@@ -16,12 +16,9 @@ import { FromSearchComponent } from './components/from-search/from-search.compon
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
-    HomeComponent,
+    NavBarComponent,   
     BestsellerComponent,
-    FooterComponent,
-    ProductlistComponent,
-    ProductdetailsComponent,
+    FooterComponent,   
     HeaderComponent,
     FromSearchComponent
   ],
