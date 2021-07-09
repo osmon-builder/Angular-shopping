@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { RoutingPath } from './configs/routing-path';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 
 const routes: Routes = [
   {
-    path:'',
-    redirectTo:'home',
-    pathMatch:'full',
+    path: "",
+    redirectTo:
+      RoutingPath.appRouting.components.landing_page.path +
+      "/" +
+      RoutingPath.appRouting.components.landing_page.pages.home.path,
+    pathMatch: "full"
   },
   {
-    path:'home',
-    loadChildren: () => 
-      import('./home/home.module').then((m) => m.HomeModule)
-  },
-  {
-    path:'productlist',
-    loadChildren: () => 
-      import('./components/product/productlist/productlist.module').then((m) => m.ProductListModule)
+    path: RoutingPath.appRouting.components.landing_page.path,
+    component: MainLayoutComponent,
+    loadChildren: () =>
+      import('./modules/landing-page/landing-page.module').then((m) => m.LandingPageModule)
   }
 ];
 
