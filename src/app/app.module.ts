@@ -20,7 +20,7 @@ import { FromSearchComponent } from './components/from-search/from-search.compon
     BestsellerComponent,
     FooterComponent,   
     HeaderComponent,
-    FromSearchComponent
+    FromSearchComponent,
   ],
   imports: [
     BrowserModule,

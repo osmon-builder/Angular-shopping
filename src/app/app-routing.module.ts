@@ -11,12 +11,12 @@ const routes: Routes = [
   {
     path:'home',
     loadChildren: () => 
-      import('./home/home.component').then((m) => m.HomeComponent)
+      import('./home/home.module').then((m) => m.HomeModule)
   },
   {
-    path:'productlist/:id',
+    path:'productlist',
     loadChildren: () => 
-      import('./components/product/productlist/productlist.component').then((m) => m.ProductlistComponent)
+      import('./components/product/productlist/productlist.module').then((m) => m.ProductListModule)
   }
 ];
 
