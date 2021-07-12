@@ -8,6 +8,7 @@ import { FromSearchComponent } from './modules/landing-page/components/from-sear
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { MainLayoutModule } from './layouts/main-layout/main-layout.module';
 import { LandingPageModule } from './modules/landing-page/landing-page.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LandingPageModule } from './modules/landing-page/landing-page.module';
     AppRoutingModule,
     HttpClientModule,
     MainLayoutModule,
-    LandingPageModule
+    LandingPageModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

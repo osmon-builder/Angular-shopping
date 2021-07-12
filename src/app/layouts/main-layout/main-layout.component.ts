@@ -9,7 +9,11 @@ export class MainLayoutComponent{
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() 
+  {
+
+  }
+ 
+    
   }
 
-}

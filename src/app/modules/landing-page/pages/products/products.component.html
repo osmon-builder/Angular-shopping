@@ -1,12 +1,23 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-3" *ngFor="let product of products">
-            <div style="width: 100%; border: 1px solid #ccc;">
-                {{product.title}}
-                <img src="{{product.thumbnail}}"/>
-                <h3>{{product.price}} COP</h3> 
-                <h3>{{product.available_quantity}} U/D </h3>
-                <button>Agregar al carro</button>
+        <div class="col-lg-12 col-md-4 card-outside" *ngFor="let product of products">
+            <div class="card-inside">
+                <img src="{{product.thumbnail}}" />
+                <div class="footer-card">
+                    <h3>{{product.title}}</h3>
+                    <ul>
+                        <li>
+                            <h3>${{product.price}} COP</h3>
+                        </li>
+                        <li>
+                            <h3>{{product.available_quantity}} U/D </h3>
+                        </li>
+                    </ul>
+                    <button class="btn-card">
+                        <i class="bi bi-cart4"></i>
+                        Agregar al carro
+                    </button>
+                </div>
             </div>
         </div>
     </div>
