@@ -1,1 +1,31 @@
-<p>home works!</p>
+<div class="dsc-carousel" [ngStyle]="{'min-height': finalHeight}">
+    <div class="dsc-carousel_btns">
+        <i class="bi bi-arrow-left-circle"(click)="setBack()"></i>      
+        <i class="bi bi-arrow-right-circle"(clik)="setNext()"></i>
+
+    </div>
+    <div class="dsc-carousel_content">
+        <ng-container *ngFor="let section of items;">
+            <div class="dsc-carousel_content-item">
+                <img src="assets/img/banner-principal-desktop.png"/>
+                <img src="assets/img/banner-principal-desktop.png"/>
+            </div>
+        </ng-container>
+        <div class="dsc-carousel_steps">
+            <div 
+                class="dsc-carousel_steps-step
+                dsc-carousel_steps-step-{{currentPosition === item.id ? 'active':''}}"
+                *ngFor="let item of items" (click)="setCurrentPosition(item.id)">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-12 col-md-3">
+        <div class="texto-infantil">       
+            <h3 >MODA INFANTIL</h3>
+        </div>
+        <div class="texto-proteccion">     
+            <h3 >PROTECCION</h3>        
+    </div>  
+</div>

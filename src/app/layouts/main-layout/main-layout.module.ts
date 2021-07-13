@@ -4,13 +4,17 @@ import { RouterModule } from '@angular/router';
 
 
 
+
 @NgModule({
+
+
   declarations: [
     
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    
   ]
 })
 export class MainLayoutModule { }
