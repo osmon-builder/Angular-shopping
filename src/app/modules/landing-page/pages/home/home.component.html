@@ -1,16 +1,20 @@
+<div class="container-fluid">
+    <div class="container"></div>
+    <div class="row">
 <div class="dsc-carousel" [ngStyle]="{'min-height': finalHeight}">
     <div class="dsc-carousel_btns">
-        <i class="bi bi-arrow-left-circle"(click)="setBack()"></i>      
-        <i class="bi bi-arrow-right-circle"(clik)="setNext()"></i>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="40.151" height="77.302" viewBox="0 0 40.151 77.302"(click)="setBack()"><defs><style>.a{fill:none;stroke:#aeaea9;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><path class="a" d="M1158.765,2320.7l-36.53,36.53,36.53,36.53" transform="translate(-1120.735 -2318.582)"/></svg>   
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="40.151" height="77.302" viewBox="0 0 40.151 77.302"(clik)="setNext()"><defs><style>.a{fill:none;stroke:#aeaea9;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><g transform="translate(-1688.114 -2286.582)"><path class="a" d="M1690.235,2288.7l36.53,36.53-36.53,36.53"/></g></svg>
 
     </div>
-    <div class="dsc-carousel_content">
-        <ng-container *ngFor="let section of items;">
-            <div class="dsc-carousel_content-item">
-                <img src="assets/img/banner-principal-desktop.png"/>
-                <img src="assets/img/banner-principal-desktop.png"/>
-            </div>
-        </ng-container>
+    <div class="dsc-carousel_content col-lg-12 col-md-3">
+       
+            <div>
+                <img src="assets/img/banner-principal-desktop.png" />
+            
+        </div>
         <div class="dsc-carousel_steps">
             <div 
                 class="dsc-carousel_steps-step
@@ -20,12 +24,17 @@
         </div>
     </div>
 </div>
-
-<div class="col-lg-12 col-md-3">
-        <div class="texto-infantil">       
+<div class="container-img">
+<div class="img-container col-sm-12 col-md-3">
+        <div class="texto-infantil">      
             <h3 >MODA INFANTIL</h3>
         </div>
-        <div class="texto-proteccion">     
-            <h3 >PROTECCION</h3>        
-    </div>  
 </div>
+
+<div class="texto-proteccion col-sm-12 col-md-3">   
+    <h3 >PROTECCION</h3>
+</div>        
+</div>
+</div>
+</div>
+
